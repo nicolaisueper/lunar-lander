@@ -3,6 +3,13 @@
 
 This is a port in C of the original "Lunar Lander" video game, which is written in BASIC.
 
+## Building
+
+This application depends on:
+
+- Linux. We will never EVER code this project for Windows.
+- NCurses. You need to compile and install it before you run the makefile. (Or install the ``` libncurses-dev ``` package using your package manager.)
+
 ## Original Sources
 
 The original source code:
