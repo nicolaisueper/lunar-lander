@@ -8,7 +8,9 @@ This is a port in C of the original "Lunar Lander" video game, which is written 
 This application depends on:
 
 - Linux. We will never EVER code this project for Windows.
-- NCurses. You need to compile and install it before you run the makefile. (Or install the ``` libncurses-dev ``` package using your package manager.)
+- NCurses. You need to compile and install it before you run the makefile. (Or use the ```prepare_build.sh``` script included with the source files.)
+
+Just run ```make``` if you have all depencies and ```make install``` to install. ```make clean``` will clean the project up.
 
 ## Original Sources
 
