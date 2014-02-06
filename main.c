@@ -3,8 +3,10 @@
 #include <string.h>
 
 int main(){	
+	const int gravity = 15;						/* The rate in which the spaceship descents in free fall */
 	int height;							/* The height of the spaceship. */
 	int speed;							/* The speed of the spaceship. */
+	int burn;							/* The fuel which gets burned this step */
 	char title[]="Lunar Lander - Version 0.0.1";
 	char license[]="Licensed under the GPLv2.";
 	char start[]="Press any key to start.";
@@ -36,20 +38,37 @@ int main(){
 	endwin();							/* End Curses Mode.*/
 
 	
-	/*THIS IS JUST FOR TESTING!*/
+	/* Set initial height and speed. */
 	speed=0;
 	height=0;
 	
-	if(height<=0){
-		if(speed>10){
-			printf(dead);
+	do {
+		printf("\nHeight: %d", height);
+		printf("\nBurn: ");
+		scanf("%i", &burn);
+	
+		if(burn<0 || burn>200) {
+			printf("The burn rate rate must be between 0 and 200.\n");
+			continue;
 		}
-		else if(speed<10){
-			printf(crashed);
-		}
-		else if(speed=0){
-			printf(success);
-		}
+
+		/*         CALCULATIONS HERE!         */
+		/*                                    */
+		/*        speed-burn+gravity          */
+		/*                                    */
+		/*------------------------------------*/
+	
+	}while(height>0);
+	
+	if(speed>10){
+		printf("%s", dead);
 	}
+	else if(speed<10){
+		printf("%s", crashed);
+	}
+	else if(speed=0){
+		printf("%s", success);
+	}
+	
 	return 0;
 }
