@@ -25,11 +25,12 @@ int main(){
 	printf("(maximum burn) kilo per second. Set burn rate every 10 seconds.\n"); /*that's wy we have to go with 10 second-steps.*/
 	printf("Good Luck!\n");
 	
-		/* Set initial height, time, fuel and speed. */
+		/* Set initial height, time, fuel, burn and speed. */
 	speed=1000;
 	height=12000;
 	fuel=12000;
 	tensec=0;
+	burn=0;
 	
 	do {
 		printf("\n%d0 Seconds passed.", tensec);
@@ -49,9 +50,9 @@ int main(){
 		continue;
 		}
 		
-		fuel = fuel-burn;
 		speed = calculate(height, speed, burn, gravity);
 		height=height-speed;
+		fuel = fuel-burn;
 		tensec++;
 			
 	}while(height>0);
