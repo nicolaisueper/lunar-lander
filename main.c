@@ -32,6 +32,7 @@ int main(){
 	fuel=12000;
 	tensec=0;
 	burn=0;
+	prevheight=12000;
 	
 	printf("\nTime\t");
 	printf("Speed\t\t");
