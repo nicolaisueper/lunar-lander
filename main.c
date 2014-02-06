@@ -35,7 +35,7 @@ int main(){
 		elseif(speed<10){
 			printf("Your spaceship crashed. Looks like you're stranded here.");
 		}
-		else(speed=0){
+		elseif(speed=0){
 			printf("You did it! Great job!");
 		}
 	}
