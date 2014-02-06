@@ -32,17 +32,18 @@ int main(){
 	fuel=12000;
 	tensec=0;
 	
+	printf("\nTime\t");
+	printf("Speed\t\t");
+	printf("Fuel\t\t");
+	printf("Height\t\t");
+	printf("Burn\n");
+	
 	do {
-		printf("\n%d0 Seconds passed.", tensec);
-		if(fuel<=0) {
-			printf("\nNo fuel left.");
-		}
-		else{
-			printf("\nYou have %d kg of fuel left.", fuel);
-		}
-		printf("\nHeight: %d", height);
-		printf("\nSpeed: %d", speed);
-		printf("\nBurn: ");
+	
+		printf("%d0\t", tensec);
+		printf("%d\t\t", speed);
+		printf("%d\t\t", fuel);
+		printf("%d\t\t", height);
 		scanf("%i", &burn);
 		
 		if(burn<0 || burn>200) {					/* If there is a wrong entry */
