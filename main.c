@@ -41,6 +41,7 @@ int main(){
 			printf("\nYou have %d kg of fuel left.", fuel);
 		}
 		printf("\nHeight: %d", height);
+		printf("\nSpeed: %d", speed);
 		printf("\nBurn: ");
 		scanf("%i", &burn);
 		
@@ -56,15 +57,14 @@ int main(){
 			
 	}while(height>0);
 	
-	if(speed>10){
-		printf("%s", dead);
-	}
-	else if(speed<10){
-		printf("%s", crashed);
-	}
-	else if(speed=0){
-		printf("%s", success);
-	}
-	
+		if(speed>10){
+			printf("%s", dead);
+		}
+		else if(speed<10){
+			printf("%s", crashed);
+		}
+		else if(speed=0){
+			printf("%s", success);
+		}
 	return 0;
 }
