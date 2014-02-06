@@ -47,7 +47,7 @@ int main(){
 		printf("%d\t\t", fuel);
 		
 		if(height<prevheight){
-			printf("\x1b[31m%d\x1b[0m\t\t, height");
+			printf("\x1b[31m%d\x1b[0m\t\t", height);
 		}
 		
 		else if(height==prevheight){
