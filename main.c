@@ -28,7 +28,7 @@ int main(){
 	speed=0;
 	height=0;
 	
-	if(height=<0){
+	if(height<=0){
 		if(speed>10){
 			printf("There were no survivors.");
 		}
