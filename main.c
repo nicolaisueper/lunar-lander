@@ -12,7 +12,7 @@ int main(){
 	int burn;	/* The fuel which gets burned this step */
 	int tensec;	/* The time the flight is running for. (in ten second steps) */
 	int fuel;	/* The fuel you have left. (kilogram) */
-	int prevheight  /* The previous height to compare with actual. (coloured digits) */
+	int prevheight;  /* The previous height to compare with actual. (coloured digits) */
 
 
 	char dead[]="\nThere were no survivors.\n";
