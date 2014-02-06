@@ -2,6 +2,10 @@
 #include <stdio.h>
 #include <string.h>
 
+int calculate(int height, int speed, int burn, int gravity) {
+	return (speed+gravity-burn);
+}
+
 int main(){	
 	const int gravity = 15;						/* The rate in which the spaceship descents in free fall */
 	int height;							/* The height of the spaceship. */
@@ -52,11 +56,7 @@ int main(){
 			continue;
 		}
 
-		/*         CALCULATIONS HERE!         */
-		/*                                    */
-		/*        speed-burn+gravity          */
-		/*                                    */
-		/*------------------------------------*/
+		speed = calculate(height, speed, burn, gravity);
 	
 	}while(height>0);
 	
