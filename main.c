@@ -63,7 +63,7 @@ int main(){
 		else if(speed<10){
 			printf("%s", crashed);
 		}
-		else if(speed=0){
+		else if(speed==0){
 			printf("%s", success);
 		}
 	return 0;
