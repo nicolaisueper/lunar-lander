@@ -8,7 +8,7 @@ int main(){
 	char title[]="Lunar Lander - Version 0.0.1";
 	char license[]="Licensed under the GPLv2.";
 	char start[]="Press any key to start.";
-	int row,col;							/* to store the number of rows and */
+	int row,col;							/* store the number of rows and */
 							                /* the number of colums of the screen, */
 	initscr();					                /* start the curses mode, */
 	getmaxyx(stdscr,row,col);					/* get the number of rows and columns, */
@@ -17,7 +17,7 @@ int main(){
 	mvprintw(row-1,(col-strlen(start))/2,"%s",start);
 	refresh();
 	getch();
-	endwin();	/* End Curses Mode.*/
+	endwin();							/* End Curses Mode.*/
 	printf("THIS IS A COMPUTER SIMULATION OF AN APOLLO LUNAR LANDING CAPSULE.\n");
 	printf("THE ON-BOARD COMPUTER HAS FAILED SO YOU HAVE TO LAND THE CAPSULE MANUALLY.\n");
 	printf("SET BURN RATE OF RETRO ROCKETS TO ANY VALUE BETWEEN 0 (FREE FALL) AND 200 (MAXIMUM BURN) POUNDS PER SECOND.\n");
@@ -28,13 +28,14 @@ int main(){
 	speed=0;
 	height=0;
 	
-	if(height<=0 && speed>10){
-		printf("There were no survivors.");
+	if(height<=0){
+		if(speed>10){
+			printf("There were no survivors.");
 		}
-		elseif(speed<10){
+		else if(speed<10){
 			printf("Your spaceship crashed. Looks like you're stranded here.");
 		}
-		else(speed=0){
+		else if(speed=0){
 			printf("You did it! Great job!");
 		}
 	}
