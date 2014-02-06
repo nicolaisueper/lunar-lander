@@ -3,7 +3,8 @@
 #include <string.h>
 
 int main(){	
-	int ch;
+	int height;							/* The height of the spaceship. */
+	int speed;							/* The speed of the spaceship. */
 	char title[]="Lunar Lander - Version 0.0.1";
 	char license[]="Licensed under the GPLv2.";
 	char start[]="Press any key to start.";
@@ -22,5 +23,21 @@ int main(){
 	printf("SET BURN RATE OF RETRO ROCKETS TO ANY VALUE BETWEEN 0 (FREE FALL) AND 200 (MAXIMUM BURN) POUNDS PER SECOND.\n");
 	printf("SET NEW BURN RATE EVERY 10 SECONDS.\n");
 	printf("CAPSULE WEIGHT 32,500 LBS; FUEL WEIGHT 16,500 LBS.\n");
+	
+	/*THIS IS JUST FOR TESTING!*/
+	speed=0;
+	height=0;
+	
+	if(height=<0){
+		if(speed>10){
+			printf("There were no survivors.");
+		}
+		if(speed<10){
+			printf("Your spaceship crashed. Looks like you're stranded here.");
+		}
+		if(speed=0){
+			printf("You did it! Great job!");
+		}
+	}
 	return 0;
 }
