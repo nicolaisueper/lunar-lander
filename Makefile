@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=-O3 -Wall
-LIBS=-lncurses
+LIBS=
 
 CFILES=main.c
 HFILES=

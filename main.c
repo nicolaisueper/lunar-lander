@@ -1,4 +1,3 @@
-#include <ncurses.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -26,11 +25,12 @@ int main(){
 	printf("(maximum burn) kilo per second. Set burn rate every 10 seconds.\n"); /*that's wy we have to go with 10 second-steps.*/
 	printf("Good Luck!\n");
 	
-		/* Set initial height, time, fuel and speed. */
+		/* Set initial height, time, fuel, burn and speed. */
 	speed=1000;
 	height=12000;
 	fuel=12000;
 	tensec=0;
+	burn=0;
 	
 	do {
 		printf("\n%d0 Seconds passed.", tensec);
@@ -43,16 +43,16 @@ int main(){
 		printf("\nHeight: %d", height);
 		printf("\nSpeed: %d", speed);
 		printf("\nBurn: ");
-		scanf("%i", &burn);
+		scanf("%d", &burn);
 		
 		if(burn<0 || burn>200) {					/* If there is a wrong entry */
 		printf("The burn rate rate must be between 0 and 200.\n");
 		continue;
 		}
 		
-		fuel = fuel-burn;
 		speed = calculate(height, speed, burn, gravity);
 		height=height-speed;
+		fuel = fuel-burn;
 		tensec++;
 			
 	}while(height>0);
