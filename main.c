@@ -42,7 +42,7 @@ int main(){
 		printf("\nHeight: %d", height);
 		printf("\nSpeed: %d", speed);
 		printf("\nBurn: ");
-		scanf("%i", &burn);
+		scanf("%d", &burn);
 		
 		if(burn<0 || burn>200) {					/* If there is a wrong entry */
 		printf("The burn rate rate must be between 0 and 200.\n");
