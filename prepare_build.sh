@@ -10,6 +10,8 @@ echo
 echo Now you need to type your password:
 echo 
 sudo make install
+cd ..
+rm -rf ncurses*
 echo 
 echo Done.
 echo Now type in 'make' to continue!
