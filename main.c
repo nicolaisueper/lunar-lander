@@ -19,7 +19,7 @@ int main(){
 	char crashed[]="\nThe Spaceship crashed. Good luck getting back home.\n";
 	char success[]="\nYou made it! Good job!\n";
 
-	printf("\nLunar Lander - Version 0.1\n");
+	printf("\nLunar Lander - Version 1.0\n");
 	printf("This is a computer simulation of an Apollo lunar landing capsule.\n");
 	printf("The on-board computer has failed so you have to land the capsule manually.\n");
 	printf("Set burn rate of retro rockets to any value between 0 (free fall) and 200\n");
