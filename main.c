@@ -12,6 +12,7 @@ int main(){
 	int burn;	/* The fuel which gets burned this step */
 	int tensec;	/* The time the flight is running for. (in ten second steps) */
 	int fuel;	/* The fuel you have left. (kilogram) */
+	int prevheight  /* The previous height to compare with actual. (coloured digits) */
 
 
 	char dead[]="\nThere were no survivors.\n";
@@ -44,7 +45,20 @@ int main(){
 		printf("%d0\t", tensec);
 		printf("%d\t\t", speed);
 		printf("%d\t\t", fuel);
-		printf("%d\t\t", height);
+		
+		if(height<prevheight){
+			printf("\x1b[31m%d\x1b[0m\t\t, height");
+		}
+		
+		else if(height==prevheight){
+			printf("%d\t\t", height);
+			
+		}
+		
+		else if(height>prevheight){
+			printf("\x1b[32m%d\x1b[0m\t\t", height);
+		}
+		
 		scanf("%i", &burn);
 		
 		if(burn<0 || burn>200) {					/* If there is a wrong entry */
@@ -52,6 +66,7 @@ int main(){
 		continue;
 		}
 		
+		prevheight = height;
 		speed = calculate(height, speed, burn, gravity);
 		height=height-speed;
 		fuel = fuel-burn;
