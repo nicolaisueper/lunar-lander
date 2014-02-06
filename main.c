@@ -32,10 +32,10 @@ int main(){
 		if(speed>10){
 			printf("There were no survivors.");
 		}
-		elseif(speed<10){
+		else if(speed<10){
 			printf("Your spaceship crashed. Looks like you're stranded here.");
 		}
-		elseif(speed=0){
+		else if(speed=0){
 			printf("You did it! Great job!");
 		}
 	}
