@@ -5,6 +5,26 @@ int calculate(int height, int speed, int burn, int gravity) {
 	return (speed+gravity-burn);
 }
 
+int windowcleaner(int step) {
+	if(step>=24){
+		printf("\nTime\t");
+		printf("Speed\t\t");
+		printf("Fuel\t\t");
+		printf("Height\t\t");
+		printf("Burn\n");
+		printf("----\t");
+		printf("-----\t\t");
+		printf("----\t\t");
+		printf("------\t\t");
+		printf("----\n");
+		step=1;
+	}
+	else if(step<24){
+		step++;
+	}
+	return step;
+}
+
 int main(){	
 	const int gravity = 100;	/* The rate in which the spaceship descents in free fall (in ten seconds) */
 	int height;	/* The height of the spaceship. */
@@ -13,6 +33,7 @@ int main(){
 	int tensec;	/* The time the flight is running for. (in ten second steps) */
 	int fuel;	/* The fuel you have left. (kilogram) */
 	int prevheight;  /* The previous height to compare with actual. (coloured digits) */
+	int step;	/* Counts the steps passed since last output of the collumn names */
 
 
 	char dead[]="\nThere were no survivors.\n\n";
@@ -27,22 +48,29 @@ int main(){
 	printf("(maximum burn) kilo per second. Set burn rate every 10 seconds.\n"); /*that's wy we have to go with 10 second-steps.*/
 	printf("Good Luck!\n");
 	
-		/* Set initial height, time, fuel, burn and speed. */
+		/* Set initial height, time, fuel, burn, prevheight, step and speed. */
 	speed=1000;
 	height=12000;
 	fuel=12000;
 	tensec=0;
 	burn=0;
 	prevheight=12000;
+	step=1;
 	
 	printf("\nTime\t");
 	printf("Speed\t\t");
 	printf("Fuel\t\t");
 	printf("Height\t\t");
 	printf("Burn\n");
+	printf("----\t");
+	printf("-----\t\t");
+	printf("----\t\t");
+	printf("------\t\t");
+	printf("----\n");
 	
 	do {
-
+		
+		step=windowcleaner(step);
 	
 		printf("%d0\t", tensec);
 		printf("%d\t\t", speed);
