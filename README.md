@@ -7,8 +7,8 @@ This is a port in C of the original "Lunar Lander" video game, which is written 
 
 This application depends on:
 
--Linux because Windows(r)(tm) is crap.
--Basic build tools. Mainly gcc, make and some other stuff. 
+- Linux because Windows(r)(tm) is crap.
+- Build tools. Mainly gcc, make and some other stuff. 
 
 Just run ```make``` if you have all depencies and ```make install``` to install. ```make clean``` will clean the project up.
 
