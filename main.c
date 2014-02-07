@@ -18,6 +18,7 @@ int main(){
 	char dead[]="\nThere were no survivors.\n\n";
 	char crashed[]="\nThe Spaceship crashed. Good luck getting back home.\n\n";
 	char success[]="\nYou made it! Good job!\n\n";
+	char emptyfuel[]="\nThere is no fuel left. Your spaceship crashed.\n\n";
 
 	printf("\nLunar Lander - Version 1.0\n");
 	printf("This is a computer simulation of an Apollo lunar landing capsule.\n");
@@ -71,18 +72,29 @@ int main(){
 		speed = calculate(height, speed, burn, gravity);
 		height=height-speed;
 		fuel = fuel-burn;
+		
+		if(fuel<=0) {
+			break;
+		}
+		
 		tensec++;
 			
 	}while(height>0);
 	
-	if(speed>10){
-		printf("%s", dead);
+	if(height<=0){
+		if(speed>10){
+			printf("%s", dead);
+		}
+		else if(speed<10){
+			printf("%s", crashed);
+		}
+		else if(speed==0){
+			printf("%s", success);
+		}
 	}
-	else if(speed<10){
-		printf("%s", crashed);
+	else if(height>0){
+		printf("%s", emptyfuel);
 	}
-	else if(speed==0){
-		printf("%s", success);
-	}
+	
 	return 0;
 }
