@@ -52,7 +52,7 @@ int main(int argc, char *argv[]){
 	
 		/* Set initial height, time, fuel, burn, prevheight, step and speed properly to difficulty. */
 	if(argv[1]="-d"){
-		if(argv[2]==1){	/* Easy */
+		if(argv[2]="1"){	/* Easy */
 			speed=1000;
 			height=12000;
 			fuel=12000;
@@ -61,7 +61,7 @@ int main(int argc, char *argv[]){
 			prevheight=12000;
 			step=1;
 		}
-		if(argv[2]==2){	/* Medium */
+		if(argv[2]="2"){	/* Medium */
 			speed=1000;
 			height=12000;
 			fuel=1000;
@@ -70,7 +70,7 @@ int main(int argc, char *argv[]){
 			prevheight=12000;
 			step=1;
 		}
-		if(argv[2]==3){	/* Hard */
+		if(argv[2]="3"){	/* Hard */
 			speed=2000;
 			height=900;
 			fuel=900;
