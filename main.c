@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int calculate(int height, int speed, int burn, int gravity) {
 	return (speed+gravity-burn);
@@ -25,15 +26,16 @@ int windowcleaner(int step) {
 	return step;
 }
 
-int main(){	
+int main(int argc, char *argv[]){
+	
 	const int gravity = 100;	/* The rate in which the spaceship descents in free fall (in ten seconds) */
-	int height;	/* The height of the spaceship. */
-	int speed;	/* The speed of the spaceship. */
-	int burn;	/* The fuel which gets burned this step */
-	int tensec;	/* The time the flight is running for. (in ten second steps) */
-	int fuel;	/* The fuel you have left. (kilogram) */
-	int prevheight;  /* The previous height to compare with actual. (coloured digits) */
-	int step;	/* Counts the steps passed since last output of the collumn names */
+	int height;			/* The height of the spaceship. */
+	int speed;			/* The speed of the spaceship. */
+	int burn;			/* The fuel which gets burned this step */
+	int tensec;			/* The time the flight is running for. (in ten second steps) */
+	int fuel;			/* The fuel you have left. (kilogram) */
+	int prevheight;			/* The previous height to compare with actual. (coloured digits) */
+	int step;			j/* Counts the steps passed since last output of the collumn names */
 
 
 	char dead[]="\nThere were no survivors.\n\n";
@@ -48,14 +50,45 @@ int main(){
 	printf("(maximum burn) kilo per second. Set burn rate every 10 seconds.\n"); /*that's wy we have to go with 10 second-steps.*/
 	printf("Good Luck!\n");
 	
-		/* Set initial height, time, fuel, burn, prevheight, step and speed. */
-	speed=1000;
-	height=12000;
-	fuel=12000;
-	tensec=0;
-	burn=0;
-	prevheight=12000;
-	step=1;
+		/* Set initial height, time, fuel, burn, prevheight, step and speed properly to difficulty. */
+	if(argv[1]="-d"){
+		if(argv[2]="1"){	/* Easy */
+			speed=1000;
+			height=12000;
+			fuel=12000;
+			tensec=0;
+			burn=0;
+			prevheight=12000;
+			step=1;
+		}
+		if(argv[2]="2"){	/* Medium */
+			speed=1000;
+			height=12000;
+			fuel=1000;
+			tensec=0;
+			burn=0;
+			prevheight=12000;
+			step=1;
+		}
+		if(argv[2]="3"){	/* Hard */
+			speed=2000;
+			height=900;
+			fuel=900;
+			tensec=0;
+			burn=0;
+			prevheight=12000;
+			step=1;
+		}
+	}
+	else {				/* Default: Easy */
+		speed=1000;
+		height=12000;
+		fuel=12000;
+		tensec=0;
+		burn=0;
+		prevheight=12000;
+		step=1;
+	}
 	
 	printf("\nTime\t");
 	printf("Speed\t\t");
