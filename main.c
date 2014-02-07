@@ -18,7 +18,7 @@ int main(){
 	char dead[]="\nThere were no survivors.\n\n";
 	char crashed[]="\nThe Spaceship crashed. Good luck getting back home.\n\n";
 	char success[]="\nYou made it! Good job!\n\n";
-	char emptyfuel[]="\nThere is no fuel left. Your spaceship crashed.\n\n";
+	char emptyfuel[]="\nThere is no fuel left. You're floating around like Wheatley.\n\n";
 
 	printf("\nLunar Lander - Version 1.0\n");
 	printf("This is a computer simulation of an Apollo lunar landing capsule.\n");
