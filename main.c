@@ -15,9 +15,9 @@ int main(){
 	int prevheight;  /* The previous height to compare with actual. (coloured digits) */
 
 
-	char dead[]="\nThere were no survivors.\n";
-	char crashed[]="\nThe Spaceship crashed. Good luck getting back home.\n";
-	char success[]="\nYou made it! Good job!\n";
+	char dead[]="\nThere were no survivors.\n\n";
+	char crashed[]="\nThe Spaceship crashed. Good luck getting back home.\n\n";
+	char success[]="\nYou made it! Good job!\n\n";
 
 	printf("\nLunar Lander - Version 1.0\n");
 	printf("This is a computer simulation of an Apollo lunar landing capsule.\n");
@@ -75,14 +75,14 @@ int main(){
 			
 	}while(height>0);
 	
-		if(speed>10){
-			printf("%s", dead);
-		}
-		else if(speed<10){
-			printf("%s", crashed);
-		}
-		else if(speed==0){
-			printf("%s", success);
-		}
+	if(speed>10){
+		printf("%s", dead);
+	}
+	else if(speed<10){
+		printf("%s", crashed);
+	}
+	else if(speed==0){
+		printf("%s", success);
+	}
 	return 0;
 }
