@@ -12,6 +12,11 @@ int windowcleaner(int step) {
 		printf("Fuel\t\t");
 		printf("Height\t\t");
 		printf("Burn\n");
+		printf("----\t");
+		printf("-----\t\t");
+		printf("----\t\t");
+		printf("------\t\t");
+		printf("----\n");
 		step=1;
 	}
 	else if(step<24){
@@ -57,6 +62,11 @@ int main(){
 	printf("Fuel\t\t");
 	printf("Height\t\t");
 	printf("Burn\n");
+	printf("----\t");
+	printf("-----\t\t");
+	printf("----\t\t");
+	printf("------\t\t");
+	printf("----\n");
 	
 	do {
 		
