@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <time.h>
 
 int calculate(int height, int speed, int burn, int gravity) {
 	return (speed+gravity-burn);
@@ -24,6 +25,14 @@ int windowcleaner(int step) {
 		step++;
 	}
 	return step;
+}
+
+int randomheight() {
+	time_t t;
+	
+	time(&t);
+	srand((unsigned int)t);
+	return (rand() % 15000 + 4000);
 }
 
 int main(int argc, char *argv[]){
@@ -54,39 +63,39 @@ int main(int argc, char *argv[]){
 	if(argv[1]="-d"){
 		if(argv[2]="1"){	/* Easy */
 			speed=1000;
-			height=12000;
+			height=randomheight();
 			fuel=12000;
 			tensec=0;
 			burn=0;
-			prevheight=12000;
+			prevheight=height;
 			step=1;
 		}
 		if(argv[2]="2"){	/* Medium */
 			speed=1000;
-			height=12000;
+			height=randomheight();
 			fuel=1000;
 			tensec=0;
 			burn=0;
-			prevheight=12000;
+			prevheight=height;
 			step=1;
 		}
 		if(argv[2]="3"){	/* Hard */
 			speed=2000;
-			height=900;
+			height=randomheight() - 2000;
 			fuel=900;
 			tensec=0;
 			burn=0;
-			prevheight=12000;
+			prevheight=height;
 			step=1;
 		}
 	}
 	else {				/* Default: Easy */
 		speed=1000;
-		height=12000;
+		height=randomheight();
 		fuel=12000;
 		tensec=0;
 		burn=0;
-		prevheight=12000;
+		prevheight=height;
 		step=1;
 	}
 	
