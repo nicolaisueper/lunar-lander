@@ -35,7 +35,7 @@ int randomheight() {
 	return (rand() % 15000 + 4000);
 }
 
-int main(int argc[], char *argv[]){
+int main(int argc, char *argv[]){
 	
 	const int gravity = 100;	/* The rate in which the spaceship descents in free fall (in ten seconds) */
 	int height;			/* The height of the spaceship. */
