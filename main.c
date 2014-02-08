@@ -51,7 +51,7 @@ int main(int argc, char *argv[]){
 	char crashed[]="\nThe Spaceship crashed. Good luck getting back home.\n\n";
 	char success[]="\nYou made it! Good job!\n\n";
 	char emptyfuel[]="\nThere is no fuel left. You're floating around like Wheatley.\n\n";
-
+	
 	printf("\nLunar Lander - Version 1.0\n");
 	printf("This is a computer simulation of an Apollo lunar landing capsule.\n");
 	printf("The on-board computer has failed so you have to land the capsule manually.\n");
