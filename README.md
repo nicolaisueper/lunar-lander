@@ -9,6 +9,7 @@ This application depends on:
 
 - Linux because Windows(r)(tm) is crap.
 - Build tools. Mainly gcc, make and some other stuff. 
+- A VT1000 compatible terminal emulator for the color output.
 
 Just run ```make``` if you have all depencies and ```make install``` to install. ```make clean``` will clean the project up.
 
