@@ -1,7 +1,7 @@
 # Lunar Lander [![Build Status](https://travis-ci.org/k3ll4gr0up/lunar-lander.png?branch=master)](https://travis-ci.org/k3ll4gr0up/lunar-lander)
 
 
-This is a port in C of the original "Lunar Lander" video game, which is written in BASIC.
+This is a port in C of the original "Lunar Lander" video game, which is written in BASIC. [Tell me more.](http://k40s.net/183/lunar-lander/)
 
 ## Building
 
@@ -15,6 +15,7 @@ Just run ```make``` if you have all depencies and ```make install``` to install.
 
 ## About this game
 
-Lunar Lander was the first-ever PC game written in 1967 by a student. It was originally written in BASIC, but there are plenty of other languages out there in which this game is written. And now, it's just one more. 
+Lunar Lander was the first-ever PC game written in 1967 by a student. It was originally written in BASIC, but there are plenty of other languages out there in which this game is written. @nicolaisueper and myself go to the same school where we had to pick a topic for a project we had to do. We decided to write a text-based game in C. As we stumbled upon lunar-lander at [technologizer](http://technologizer.com/2009/07/19/lunar-lander/) we decided to write a similar program like this in C. 
 
-We don't lean too much on the original sources. This program ist just a similar game. no exact C-copy of it.
+So we took a look at the BASIC sources which we got [here](http://www.vintage-basic.net/bcg/lunar.bas) and began writing. Now the final version of our program is finished and we are just about to begin working on a GUI version of this.
+
